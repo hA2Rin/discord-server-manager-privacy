@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="하이린이 운영하는 Discord 서버 관리 봇의 개인정보 처리방침입니다.">
+  <title>개인정보 처리방침 | Discord 서버 관리 봇</title>
+  <style>
+    :root { color-scheme: light; --ink: #202523; --muted: #58645f; --line: #d9e1dc; --paper: #f3f6f3; --green: #146b50; --orange: #bd5429; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 16px/1.75 "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; }
+    header { padding: 42px 24px 34px; background: #17382e; color: #f8fff9; border-bottom: 5px solid #e4a45c; }
+    header > div, main, footer { width: min(850px, 100%); margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: #b8ddc8; font-size: 13px; font-weight: 700; }
+    h1 { margin: 0; font-size: clamp(30px, 6vw, 42px); line-height: 1.25; }
+    header p:last-child { margin: 14px 0 0; color: #d7e9de; }
+    main { padding: 28px 24px 56px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; color: var(--muted); border-bottom: 1px solid var(--line); font-size: 14px; }
+    nav { padding: 18px 20px; margin: 24px 0 36px; background: #e7efe9; border-left: 4px solid var(--green); }
+    nav strong { display: block; margin-bottom: 5px; }
+    nav a { color: var(--green); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    section { padding: 0 0 25px; margin: 0 0 27px; border-bottom: 1px solid var(--line); }
+    h2 { margin: 0 0 10px; font-size: 21px; line-height: 1.4; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0; padding-left: 22px; }
+    a { color: var(--green); }
+    footer { padding: 0 24px 32px; color: var(--muted); font-size: 14px; }
+    @media (max-width: 520px) { header { padding: 30px 20px 26px; } main { padding: 22px 20px 44px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">DISCORD SERVER MANAGER</p>
+      <h1>개인정보 처리방침</h1>
+      <p>봇이 어떤 개인정보를 처리하고 어떻게 삭제하는지 안내합니다.</p>
+    </div>
+  </header>
+  <main>
+    <div class="meta"><span>시행일: 2026년 10월 7일</span><span>개인정보처리자: 하이린</span></div>
+    <nav aria-label="문서 안내"><strong>함께 확인할 정책</strong><a href="https://ha2rin.github.io/discord-server-manager-terms/">이용약관</a></nav>
+
+    <section>
+      <h2>1. 개인정보처리자 및 문의</h2>
+      <p>개인정보처리자는 하이린입니다. 개인정보 처리에 관한 문의, 열람·정정·삭제 요청은 <a href="mailto:hipolewlr@naver.com">hipolewlr@naver.com</a>으로 보내 주세요. 요청자의 Discord 계정 확인에 필요한 최소 정보만 요청할 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2>2. 처리하는 개인정보와 목적</h2>
+      <ul>
+        <li><strong>생일 등록·표시:</strong> Discord 사용자 ID, 생일 월·일, 이용자가 선택 입력한 출생 연도, 나이 공개 설정을 등록 서버별로 저장합니다. 생일 조회, 관리자 목록 표시, 해당 서버에서 생일 축하 메시지를 게시하는 데 사용합니다.</li>
+        <li><strong>명령어 수행:</strong> 명령을 실행할 때 Discord 사용자·서버·채널 ID, 사용자명, 서버명·구성·역할·가입 정보와 필요한 메시지 메타데이터를 Discord API에서 조회해 응답하거나 요청한 관리 작업을 수행합니다. 코드상 이 정보를 별도의 사용자 프로필 데이터베이스에 저장하지 않습니다.</li>
+        <li><strong>운영 및 오류 확인:</strong> 봇 실행 중 오류 정보를 콘솔에 기록할 수 있습니다. 해당 기록의 보관 여부와 기간은 봇을 실행하는 호스팅 환경의 설정에 따릅니다.</li>
+      </ul>
+      <p>봇은 일반 메시지 내용을 수집해 보관하거나, 이용자에게 DM을 보내지 않습니다. 다만 `/clear`는 이용자가 지정한 채널의 메시지를 Discord에서 삭제하고, `/analyze`는 최근 메시지의 시각을 조회해 활동 여부를 계산합니다.</p>
+    </section>
+
+    <section>
+      <h2>3. 생일 정보의 공개와 서버 범위</h2>
+      <p>생일 등록 시 확인 메시지에 생일 월·일이 표시되어 해당 상호작용이 이루어진 채널 이용자에게 공개될 수 있습니다. 나이 공개를 선택하면 출생 연도에서 계산한 나이도 표시됩니다. 생일 당일에는 등록한 서버의 시스템 채널 또는 봇이 메시지를 보낼 수 있는 채널에 @everyone 알림을 포함한 축하 메시지가 게시될 수 있습니다. 생일 정보는 등록한 서버에서만 조회·게시됩니다.</p>
+      <p>이용자는 등록 전에 공개 범위를 고려해야 합니다. `/birthday unregister` 명령어로 본인의 생일 정보를 삭제할 수 있습니다. 관리자는 `/birthday list`에서 해당 서버의 등록 정보를 확인하고 삭제할 수 있습니다.</p>
+      <p>정책 시행 전 저장되었으나 서버를 특정할 수 없는 기존 생일 정보는 다른 서버에서 조회하거나 자동 게시하는 데 사용하지 않습니다. 기존 기록도 `/birthday unregister` 또는 위 문의 이메일로 삭제 요청할 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2>4. 보유 및 이용 기간</h2>
+      <p>생일 정보는 이용자가 삭제하거나 해당 서버를 나갈 때까지 보유합니다. 봇이 서버에서 제거되면 해당 서버의 생일 기록을 삭제합니다. 이용자가 탈퇴하면 해당 서버에 등록된 생일 기록을 삭제하며, 서버별 기록은 서로 분리되어 있습니다.</p>
+      <p>삭제 요청은 확인 후 지체 없이 처리합니다. 백업·호스팅 환경에 잔여 사본이 생기는 경우 해당 환경의 덮어쓰기 주기에 따라 완전히 삭제되기까지 시간이 걸릴 수 있습니다. 법령에 따라 보관해야 하는 정보가 발생하는 경우에는 해당 법령이 정한 기간과 목적에 한해 보관합니다.</p>
+    </section>
+
+    <section>
+      <h2>5. 제3자 서비스 및 국외 처리</h2>
+      <p>봇은 Discord 계정·서버와 명령 기능을 위해 Discord API를 사용합니다. Discord가 처리하는 정보에는 Discord의 <a href="https://discord.com/privacy">개인정보 처리방침</a>이 적용됩니다. 봇이 실행되는 호스팅 사업자와 서버의 위치는 배포 환경에 따라 달라질 수 있으므로 개인정보의 국외 이전 여부와 구체적인 처리 위치는 해당 배포 환경의 운영자가 확인·고지해야 합니다.</p>
+      <p>이 정책 페이지는 GitHub Pages에서 제공될 수 있으며, 정책 페이지 접속 기록은 GitHub의 정책에 따라 처리됩니다. 봇에 등록한 생일 정보는 이 정책 페이지나 GitHub 저장소로 전송되지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2>6. 이용자의 권리와 행사 방법</h2>
+      <p>이용자는 본인의 개인정보에 대해 열람, 정정, 삭제 또는 처리 정지를 요청할 수 있습니다. 생일 정보는 `/birthday unregister`로 직접 삭제하거나 이메일로 요청해 주세요. 서버 관리자는 `/birthday list`에서 서버 내 생일 기록을 삭제할 수 있습니다. 요청 처리 결과는 가능한 한 신속히 회신합니다.</p>
+    </section>
+
+    <section>
+      <h2>7. 안전성 확보 조치</h2>
+      <p>생일 파일은 봇이 실행되는 서버의 로컬 데이터 파일에 저장됩니다. 운영자는 접근 권한 제한과 비밀 토큰의 안전한 관리 등 합리적인 보호 조치를 적용해야 합니다. 실제 보호 수준은 봇 호스팅 환경의 설정에 영향을 받습니다.</p>
+    </section>
+
+    <section>
+      <h2>8. 방침 변경 및 문의</h2>
+      <p>개인정보 처리 내용이 변경되면 변경 사항과 시행일을 이 페이지에 게시합니다. 중요한 변경은 가능한 범위에서 사전에 안내합니다.</p>
+      <p>개인정보 관련 문의: 하이린 · <a href="mailto:hipolewlr@naver.com">hipolewlr@naver.com</a></p>
+    </section>
+  </main>
+  <footer>이 방침은 2026년 10월 7일부터 적용됩니다. 개인정보 처리는 대한민국 개인정보 보호 관련 법령에 따릅니다.</footer>
+</body>
+</html>
